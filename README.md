@@ -10,6 +10,13 @@ This React Component displays an image gallery using CSS Grid.
 
 It's ported from Wes Bos' [free course on CSS Grids](http://cssgrid.io).
 
+## TODOs
+
+- more customization via props (e.g. colors, texts, explicit spans, min-spannings, ability to use custom overlay component)
+- use propTypes
+- code-comments
+- 100% test coverage 🤞
+
 
 [build-badge]: https://img.shields.io/travis/mBeierl/react-image-gallery-grid/master.png?style=flat-square
 [build]: https://travis-ci.org/mBeierl/react-image-gallery-grid
