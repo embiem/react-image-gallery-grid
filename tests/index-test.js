@@ -1,23 +1,28 @@
-import expect from 'expect'
-import React from 'react'
-import {render, unmountComponentAtNode} from 'react-dom'
+import expect from "expect";
+import React from "react";
+import { render, unmountComponentAtNode } from "react-dom";
 
-import Component from 'src/'
+import ImageGallery from "src/";
 
-describe('Component', () => {
-  let node
+describe("ImageGallery", () => {
+  let node;
 
   beforeEach(() => {
-    node = document.createElement('div')
-  })
+    node = document.createElement("div");
+  });
 
   afterEach(() => {
-    unmountComponentAtNode(node)
-  })
+    unmountComponentAtNode(node);
+  });
 
-  it('displays a welcome message', () => {
-    render(<Component/>, node, () => {
-      expect(node.innerHTML).toContain('Welcome to React components')
-    })
-  })
-})
+  it("renders", () => {
+    render(<ImageGallery />, node, () => {
+      expect(node.innerHTML).toContain(`<div class="overlay ">`);
+    });
+  });
+
+  // TODO testing:
+  // - shouldn't update the h's & v's when component is updated
+  // - should create correct h's & v's when maxHorizontal and maxVertical given by props
+  // - should display correct images given by props
+});
